@@ -1,4 +1,4 @@
-# [Day 1 Inverse Captcha][day1]
+# [Day 1: Inverse Captcha][day1]
 
 ## Part 1
 ``` text
