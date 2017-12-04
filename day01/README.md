@@ -1,4 +1,4 @@
-# [Day 1: Inverse Captcha][day1]
+# Day 1: [Inverse Captcha][day1]
 
 ## Part 1
 ``` text
@@ -41,11 +41,15 @@ Part two was just a small change. Since I handled the index wrapping with a modu
 
 The conditional changed from this in part 1:
 
-      if (item == arr[(index + 1) % arr.length]) {
+``` js
+if (item == arr[(index + 1) % arr.length]) {
+```
 
 to this in part 2:
 
-      if (item == arr[(index + arr.length / 2) % arr.length]) {
+``` js
+if (item == arr[(index + arr.length / 2) % arr.length]) {
+```
 
 I still remember learning about the [modulo operator][mod] for the first time. [Astroids][] made sense. I'm still amazed it's not taught outside of computer science. 
 
