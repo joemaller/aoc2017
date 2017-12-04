@@ -17,9 +17,11 @@ AoC is also a great opportunity to learn something new. This year I've got too m
 
 ## Solutions
 
-* Day 1: [Inverse Captcha](tree/master/day01)
-* Day 2: [Corruption Checksum](tree/master/day02)
+* Day 1: [Inverse Captcha](https://github.com/joemaller/aoc2017/tree/master/day01)
+* Day 2: [Corruption Checksum](https://github.com/joemaller/aoc2017/tree/master/day02)
 
 [aoc2017]: http://adventofcode.com/
 [ava]: https://github.com/avajs/ava
 [quickres]: https://www.thnkdev.com/QuickRes/
+
+
