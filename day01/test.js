@@ -28,6 +28,11 @@ const input = fs.readFileSync("input.txt");
 
 test("Day 1, part 1: Example Input", t => {
   testData_p1.map(n => {
+    const actual = cleanInput(n.sample).filter(day1.sameAsNext).reduce(sum, 0);
+    t.is(actual, n.answer);
+  });
+
+  testData_p1.map(n => {
     const actual = cleanInput(n.sample).reduce(day1.sumSameAsNext, 0);
     t.is(actual, n.answer);
   });
@@ -37,9 +42,9 @@ test("Day 1, part 1: Puzzle Input", t => {
   const start = process.hrtime();
   const solution = cleanInput(input).reduce(day1.sumSameAsNext, 0);
   const end = process.hrtime(start);
+  t.is(solution, 1182);
   t.log(`Puzzle solution is: ${solution}`);
   t.log(`Completed in ${prettyHrtime(end)}`);
-  t.pass();
 });
 
 test("Day 1, part 2: Example Input", t => {
@@ -53,7 +58,7 @@ test("Day 1, part 2: Puzzle Input", t => {
   const start = process.hrtime();
   const solution = cleanInput(input).reduce(day1.sumHalfAround, 0);
   const end = process.hrtime(start);
+  t.is(solution, 1152);
   t.log(`Puzzle solution is: ${solution}`);
   t.log(`Completed in ${prettyHrtime(end)}`);
-  t.pass();
 });
