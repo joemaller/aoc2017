@@ -15,6 +15,11 @@ AoC is also a great opportunity to learn something new. This year I've got too m
 
 2. I'm going to do the bulk of this year's challenges on a 2017 MacBook I borrowed from work. The little one (12-inch) with the keyboard I don't love. So far, it's been fine. the screen is nice (thanks to [QuickRes][]), the computer is plenty fast for simple scripts, Git and web browsing, but the keyboard really is proving to be a bit of an issue for me -- my typing is significantly worse on this.  
 
+## Solutions
+
+* Day 1: [Inverse Captcha](tree/master/day01)
+* Day 2: [Corruption Checksum](tree/master/day02)
+
 [aoc2017]: http://adventofcode.com/
 [ava]: https://github.com/avajs/ava
 [quickres]: https://www.thnkdev.com/QuickRes/

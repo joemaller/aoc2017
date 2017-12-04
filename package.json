@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "ava --watch --verbose",
-    "test": "ava"
+    "test": "ava --serial --verbose"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/joemaller/aoc2017#readme",
   "dependencies": {
-    "pretty-hrtime": "^1.0.3"
+    "pretty-hrtime": "^1.0.3",
+    "tap-nyan": "^1.1.0"
   },
   "devDependencies": {
     "ava": "^0.24.0"
