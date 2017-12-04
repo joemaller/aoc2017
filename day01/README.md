@@ -17,7 +17,30 @@ For example:
     is the last digit, 9.
 ```
 
-Part one is a pretty straightforward filter-reduce problem. First, filter the input digits down to only those matching the next digit. Then sum that list. Out of curiosity I did it twice, once as a discrete filter with a simple sum reduce, then as a single reduce. The single reduce step was about 10% faster, though that was only about 50 μs.
+Part one is a pretty straightforward filter-reduce problem. First, filter the input digits down to only those matching the next digit. Then sum that list. Out of curiosity I did it twice, once as a discrete filter with a simple sum reduce, then as a single reduce.
+
+Filter and reduce:
+
+```js
+const sameAsNext = (item, index, arr) => item == arr[(index + 1) % arr.length];
+const sum = (total, current) => total + current;
+
+input.filter(sameAsNext).reduce(sum, 0);
+```
+
+One compound reduce:
+```js
+const sumSameAsNext = (total, item, index, arr) => {
+  if (item == arr[(index + 1) % arr.length]) {
+    total = total + item;
+  }
+  return total;
+};
+
+input.reduce(sumSameAsNext, 0);
+```
+
+The single reduce is about 10% faster, though that's only about 50 μs.
 
 ## Part 2
 ``` text
@@ -51,11 +74,11 @@ to this in part 2:
 if (item == arr[(index + arr.length / 2) % arr.length]) {
 ```
 
-I still remember learning about the [modulo operator][mod] for the first time. [Astroids][] made sense. I'm still amazed it's not taught outside of computer science. 
+I still remember learning about the [modulo operator][mod] for the first time. [Asteroids][] made sense. I'm still amazed it's not taught outside of computer science. 
 
 
 
 
 [day1]: http://adventofcode.com/2017/day/1
-[astroids]: https://en.wikipedia.org/wiki/Asteroids_(video_game)
+[Asteroids]: https://en.wikipedia.org/wiki/Asteroids_(video_game)
 [mod]: https://stackoverflow.com/questions/17524673/understanding-the-modulus-operator
