@@ -23,7 +23,7 @@ For example, given the following spreadsheet:
   In this example, the spreadsheet's checksum would be 8 + 4 + 6 = 18.
 ```
 
-So far, this year's challenges could be called "Advent of Map-Reduce". Part one was pretty simple, after some mildly yucky text splitting, the checksum was a one-line reduce function. The fun part was getting to use the [ES6 Spread Operator][spread] to call `Math.min` and `Math.max` with each item in the row as a sequential argument. Made for a very clean solution:
+So far, this year's challenges could be called "Advent of Map-Reduce". Part one was pretty simple, after some mildly yucky text splitting, the checksum was a one-line reduce function. The fun part was getting to use the [ES6 Spread Operator][spread] to call `Math.min` and `Math.max` with each item in the row as a sequential argument. Made for a very clean, almost pythonic, solution:
 
 ``` js
 arr.reduce((total, row) => total + Math.max(...row) - Math.min(...row), 0);
@@ -62,7 +62,7 @@ This was a little trickier. I had a couple initial observations and questions go
 
 My first thought was that reducing the array would be wasteful since, presumably the result would be found somewhere in the middle. After going back and forth between nested loops and a reduce, nested loops turned out faster by 25-40%. Though again, these loops are so ludicrously fast it's barely worth considering. 
 
-The nested loops also let me try a language feature I'd never used before; breaking out of [labeled blocks][label]. 
+The nested loops also let me try a language feature I'd never used before; breaking out of [labeled blocks][label]. Though, in thinking about this a bit later, I wonder if I should get over my "only return once" prejudice and use a second return to short-circuit the loops instead of a  labeled break.
 
 Using the modulo operator in the conditional turned out to be just slightly faster than using `Math.trunc`, and it smells a lot better to me. I didn't bother with primality tests. 
 
