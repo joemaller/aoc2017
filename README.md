@@ -8,7 +8,7 @@ AoC is also a great opportunity to learn something new. This year I've got too m
 
 1. I'm using [AVA test runner][ava] to check my results. The shape of these challenges fits well with a unit test framework, and this is a good opportunity to work on better practices. I've never used AVA, so let's see what happens. 
 
-2. The bulk of this year's challenges will be written on a 2017 MacBook I borrowed from work. The little one (12-inch) with the keyboard I don't love. So far, it's been fine. The screen is nice (thanks to [QuickRes][]), the computer is plenty fast for simple scripts, Git and web browsing and the the battery is phenomenal. The keyboard however is really proving to be a bit of an issue for me -- my typing is significantly worse on this.  
+2. The bulk of this year's challenges will be written on a 2017 MacBook I borrowed from work. The little one (12-inch) with the keyboard I don't love. So far, it's been fine. The screen is nice (running at 1920x1200 thanks to [QuickRes][]), the computer is plenty fast for simple scripts, Git and web browsing and the the battery is phenomenal. The keyboard however is really proving to be a bit of an issue for me -- my typing is significantly worse on this.  
 
 The package.json file uses two commands: 
 
